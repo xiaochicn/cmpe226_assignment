@@ -1,0 +1,727 @@
+[2014-05-13 02:56:41,354][INFO ][node                     ] [Bella Donna] version[1.1.1], pid[14167], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-13 02:56:41,355][INFO ][node                     ] [Bella Donna] initializing ...
+[2014-05-13 02:56:41,380][INFO ][plugins                  ] [Bella Donna] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-13 02:56:44,153][INFO ][node                     ] [Bella Donna] initialized
+[2014-05-13 02:56:44,153][INFO ][node                     ] [Bella Donna] starting ...
+[2014-05-13 02:56:44,355][INFO ][transport                ] [Bella Donna] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-13 02:56:47,420][INFO ][cluster.service          ] [Bella Donna] new_master [Bella Donna][wgw0TNbOTXWSMkctIj5-vw][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-13 02:56:47,579][INFO ][discovery                ] [Bella Donna] elasticsearch/wgw0TNbOTXWSMkctIj5-vw
+[2014-05-13 02:56:47,594][INFO ][http                     ] [Bella Donna] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-13 02:56:47,610][INFO ][gateway                  ] [Bella Donna] recovered [0] indices into cluster_state
+[2014-05-13 02:56:47,611][INFO ][node                     ] [Bella Donna] started
+[2014-05-13 03:02:51,077][INFO ][cluster.metadata         ] [Bella Donna] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-13 03:02:51,430][DEBUG][action.index             ] [Bella Donna] [_river][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [index {[_river][mongodb][_meta], source[{"type": "mongodb","mongodb": {"host": "localhost","port": "27017","db": "nodetest1","collection": "usercollection"},"index": {"name": “mongoindex”,”type": "usercollection"} }]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:540)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:384)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unrecognized token 'mongoindex': was expecting ('true', 'false' or 'null')
+ at [Source: [B@1aa55dd5; line: 1, column: 152]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3094)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2339)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:766)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:454)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:555)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	... 8 more
+[2014-05-13 03:09:08,477][DEBUG][action.index             ] [Bella Donna] [_river][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [index {[_river][mongodb][_meta], source[{"type": "mongodb","mongodb": {"host": "localhost","port": "27017","db": "nodetest1","collection": "usercollection"},"index": {"name": “mongoindex”,”type": "usercollection"} }]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:540)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:384)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unrecognized token 'mongoindex': was expecting ('true', 'false' or 'null')
+ at [Source: [B@798a0aac; line: 1, column: 152]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3094)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2339)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:766)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:454)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:555)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	... 8 more
+[2014-05-13 03:09:37,609][DEBUG][action.index             ] [Bella Donna] [_river][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [index {[_river][mongodb][_meta], source[{"type": "mongodb","mongodb": {"host": "localhost","port": "27017","db": "nodetest1","collection": "usercollection"},"index": {"name": “username”,”type": "usercollection"} }]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:540)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:384)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unrecognized token 'username': was expecting ('true', 'false' or 'null')
+ at [Source: [B@7279f89b; line: 1, column: 150]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3094)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2339)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:766)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:454)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:555)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	... 8 more
+[2014-05-13 03:11:49,741][DEBUG][action.index             ] [Bella Donna] [_river][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [index {[_river][mongodb][_meta], source[{"type": "mongodb","mongodb": {"host": "localhost","port": "27017","db": "nodetest1","collection": "usercollection"},"index": {"name": "mongoindex",”type": "usercollection"} }]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:540)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:384)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting a colon to separate field name and value
+ at [Source: [B@11de47df; line: 1, column: 157]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:710)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:471)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:555)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	... 8 more
+[2014-05-13 03:12:09,177][INFO ][cluster.metadata         ] [Bella Donna] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-13 03:12:10,207][INFO ][river.mongodb            ] Parse river settings for mongodb
+[2014-05-13 03:12:10,369][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river mongodb
+[2014-05-13 03:12:10,379][INFO ][cluster.metadata         ] [Bella Donna] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-13 03:12:10,379][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.0] - hash[a0c23f1] - time[2014-02-23T20:40:05Z]
+[2014-05-13 03:12:10,379][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [false], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [nodetest1], collection [usercollection], script [null], indexing to [mongoindex]/[usercollection]
+[2014-05-13 03:12:10,427][INFO ][cluster.metadata         ] [Bella Donna] [mongoindex] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-13 03:12:12,220][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB version - 2.6.0
+[2014-05-13 03:12:12,234][INFO ][org.elasticsearch.river.mongodb.Slurper] MongoDBRiver is beginning initial import of nodetest1.usercollection
+[2014-05-13 03:12:12,238][INFO ][cluster.metadata         ] [Bella Donna] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-13 03:12:12,239][INFO ][org.elasticsearch.river.mongodb.Slurper] Collection usercollection - count: 1
+[2014-05-13 03:12:12,241][INFO ][org.elasticsearch.river.mongodb.Slurper] Number documents indexed: 1
+[2014-05-13 03:12:12,270][INFO ][cluster.metadata         ] [Bella Donna] [mongoindex] update_mapping [usercollection] (dynamic)
+[2014-05-13 03:12:12,281][INFO ][cluster.metadata         ] [Bella Donna] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-13 12:24:35,028][DEBUG][action.search.type       ] [Bella Donna] [_river][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6d152d0e] lastShard [true]
+org.elasticsearch.search.SearchParseException: [_river][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [_river] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:35,028][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][3], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6d152d0e] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:35,028][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][4], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6d152d0e] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:35,028][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][1], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6d152d0e]
+org.elasticsearch.search.SearchParseException: [mongoindex][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:35,028][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6d152d0e] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:35,028][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][2], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6d152d0e] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:35,034][DEBUG][action.search.type       ] [Bella Donna] All shards failed for phase: [query]
+[2014-05-13 12:24:39,891][DEBUG][action.search.type       ] [Bella Donna] [_river][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7e740d0a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [_river][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [_river] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:39,892][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][4], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7e740d0a]
+org.elasticsearch.search.SearchParseException: [mongoindex][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:39,894][DEBUG][action.search.type       ] [Bella Donna] All shards failed for phase: [query]
+[2014-05-13 12:24:39,892][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][2], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7e740d0a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:39,891][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][0], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7e740d0a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:39,891][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][1], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7e740d0a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 12:24:39,891][DEBUG][action.search.type       ] [Bella Donna] [mongoindex][3], node[wgw0TNbOTXWSMkctIj5-vw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7e740d0a] lastShard [true]
+org.elasticsearch.search.SearchParseException: [mongoindex][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query":{"query_string":{"query":"{'matchAll':{''}}","lowercase_expanded_terms":true,"analyze_wildcard":false}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:634)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:508)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:480)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:252)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:202)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:216)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:203)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:186)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [mongoindex] Failed to parse query [{'matchAll':{''}}]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:241)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:330)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:260)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:622)
+	... 11 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse '{'matchAll':{''}}': Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:125)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:883)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	... 16 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Encountered " "}" "} "" at line 1, column 15.
+Was expecting one of:
+    "TO" ...
+    <RANGE_QUOTED> ...
+    <RANGE_GOOP> ...
+    
+	at org.apache.lucene.queryparser.classic.QueryParser.generateParseException(QueryParser.java:708)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_consume_token(QueryParser.java:590)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:404)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:120)
+	... 18 more
+[2014-05-13 14:36:26,709][INFO ][org.elasticsearch.river.mongodb.Indexer] Delete request [mongoindex], [usercollection], [5371e8ce45d171957f23ec6a]
+[2014-05-13 14:36:26,709][INFO ][org.elasticsearch.river.mongodb.Indexer] Delete request [mongoindex], [usercollection], [5371f16345d171957f23ec6b]
+[2014-05-13 14:36:26,709][INFO ][org.elasticsearch.river.mongodb.Indexer] Delete request [mongoindex], [usercollection], [5371f1e145d171957f23ec6c]
+[2014-05-13 14:36:26,757][INFO ][cluster.metadata         ] [Bella Donna] [mongoindex] update_mapping [usercollection] (dynamic)
+[2014-05-13 17:37:41,357][WARN ][org.elasticsearch.river.mongodb.Slurper] Exception while looping in cursor
+com.mongodb.MongoException: can't find a master
+	at com.mongodb.DBTCPConnector.checkMaster(DBTCPConnector.java:517)
+	at com.mongodb.DBTCPConnector._error(DBTCPConnector.java:363)
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:250)
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:264)
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:216)
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:184)
+	at com.mongodb.DBApiLayer$Result._advance(DBApiLayer.java:427)
+	at com.mongodb.DBApiLayer$Result.hasNext(DBApiLayer.java:396)
+	at com.mongodb.DBCursor._hasNext(DBCursor.java:464)
+	at com.mongodb.DBCursor.hasNext(DBCursor.java:484)
+	at org.elasticsearch.river.mongodb.Slurper.run(Slurper.java:123)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-13 17:41:59,130][INFO ][node                     ] [Bella Donna] stopping ...
+[2014-05-13 17:41:59,136][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river mongodb
+[2014-05-13 17:41:59,136][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing Mongo client
+[2014-05-13 17:41:59,136][INFO ][org.elasticsearch.river.mongodb.Indexer] river-mongodb indexer interrupted
+[2014-05-13 17:41:59,136][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Status thread interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at org.elasticsearch.river.mongodb.StatusChecker.run(StatusChecker.java:33)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-13 17:41:59,163][INFO ][node                     ] [Bella Donna] stopped
+[2014-05-13 17:41:59,163][INFO ][node                     ] [Bella Donna] closing ...
+[2014-05-13 17:41:59,203][INFO ][node                     ] [Bella Donna] closed
+[2014-05-13 23:56:01,003][INFO ][node                     ] [Scrier] version[1.1.1], pid[22343], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-13 23:56:01,003][INFO ][node                     ] [Scrier] initializing ...
+[2014-05-13 23:56:01,083][INFO ][plugins                  ] [Scrier] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-13 23:56:07,182][INFO ][node                     ] [Scrier] initialized
+[2014-05-13 23:56:07,183][INFO ][node                     ] [Scrier] starting ...
+[2014-05-13 23:56:07,312][INFO ][transport                ] [Scrier] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-13 23:56:10,410][INFO ][cluster.service          ] [Scrier] new_master [Scrier][XVMKs3vZSSqCoiqv6vyOEA][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-13 23:56:10,435][INFO ][discovery                ] [Scrier] elasticsearch/XVMKs3vZSSqCoiqv6vyOEA
+[2014-05-13 23:56:10,489][INFO ][http                     ] [Scrier] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-13 23:56:11,724][INFO ][gateway                  ] [Scrier] recovered [2] indices into cluster_state
+[2014-05-13 23:56:11,725][INFO ][node                     ] [Scrier] started
+[2014-05-13 23:56:12,037][INFO ][river.mongodb            ] Parse river settings for mongodb
+[2014-05-13 23:56:12,064][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river mongodb
+[2014-05-13 23:56:12,192][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.0] - hash[a0c23f1] - time[2014-02-23T20:40:05Z]
+[2014-05-13 23:56:12,192][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [false], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [nodetest1], collection [usercollection], script [null], indexing to [mongoindex]/[usercollection]
+[2014-05-13 23:56:12,339][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB version - 2.6.0
+[2014-05-13 23:56:12,479][WARN ][org.elasticsearch.river.mongodb.Slurper] Exception in slurper
+org.elasticsearch.river.mongodb.Slurper$SlurperException: River out of sync with oplog.rs collection
+	at org.elasticsearch.river.mongodb.Slurper.isRiverStale(Slurper.java:618)
+	at org.elasticsearch.river.mongodb.Slurper.oplogCursor(Slurper.java:603)
+	at org.elasticsearch.river.mongodb.Slurper.run(Slurper.java:119)
+	at java.lang.Thread.run(Thread.java:745)

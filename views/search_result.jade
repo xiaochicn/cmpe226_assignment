@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div.header-container
+   div.page-header
+     h1 CMPE226 Assignment
+  div.container
+    div.showAll
+      a(href="/") Show All Items
+    form( role="form" action='/search',method='get' class="")
+      h4 Search Result(s): #{total_items} Items
+      div(class="input-group position-right") 
+        input(type="text" name="searchText" placeholder="search")
+        input(type="submit" value="submit")
+      each d,i in data
+              div(class="panel panel-default")
+                div.panel-heading.
+                  p #{d._source.name}
+                div.panel-body
+                  table(class="table table-hover")
+                    each v,k in d._source 
+                      if k != "_id" && k != "name" && k != "category"     
+                        tr
+                          td #{k}
+                          td #{v}
+                        tr
+           
+          

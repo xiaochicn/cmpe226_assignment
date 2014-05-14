@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.container{
+	width: 960px;
+	margin: auto;
+	border-color: #ddd;
+	border-style: solid;
+	border-width: 1px;
+	
+}
+h4{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+input
+{
+	margin-right: 5px;
+}
+.position-right{
+	margin-top: -50px;
+	float: right;
+}
+.showAll{
+	margin-top: 30px;
+	margin-bottom: -20px;
+}

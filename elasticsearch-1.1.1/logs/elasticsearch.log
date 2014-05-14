@@ -1,0 +1,176 @@
+[2014-05-14 00:00:22,838][INFO ][node                     ] [Scrier] stopping ...
+[2014-05-14 00:00:22,847][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river mongodb
+[2014-05-14 00:00:22,847][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing Mongo client
+[2014-05-14 00:00:22,847][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Status thread interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at org.elasticsearch.river.mongodb.StatusChecker.run(StatusChecker.java:33)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-14 00:00:22,847][INFO ][org.elasticsearch.river.mongodb.Indexer] river-mongodb indexer interrupted
+[2014-05-14 00:00:22,880][INFO ][node                     ] [Scrier] stopped
+[2014-05-14 00:00:22,880][INFO ][node                     ] [Scrier] closing ...
+[2014-05-14 00:00:22,887][INFO ][node                     ] [Scrier] closed
+[2014-05-14 00:03:50,033][INFO ][node                     ] [Poison] version[1.1.1], pid[22520], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 00:03:50,033][INFO ][node                     ] [Poison] initializing ...
+[2014-05-14 00:03:50,058][INFO ][plugins                  ] [Poison] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 00:03:52,351][INFO ][node                     ] [Poison] initialized
+[2014-05-14 00:03:52,351][INFO ][node                     ] [Poison] starting ...
+[2014-05-14 00:03:52,428][INFO ][transport                ] [Poison] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-14 00:03:55,464][INFO ][cluster.service          ] [Poison] new_master [Poison][YtAX06XoRw2QRjRhwEGumA][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-14 00:03:55,487][INFO ][discovery                ] [Poison] elasticsearch/YtAX06XoRw2QRjRhwEGumA
+[2014-05-14 00:03:55,505][INFO ][http                     ] [Poison] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-14 00:03:56,058][INFO ][gateway                  ] [Poison] recovered [2] indices into cluster_state
+[2014-05-14 00:03:56,059][INFO ][node                     ] [Poison] started
+[2014-05-14 00:03:56,218][INFO ][river.mongodb            ] Parse river settings for mongodb
+[2014-05-14 00:03:56,239][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river mongodb
+[2014-05-14 00:03:56,256][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.0] - hash[a0c23f1] - time[2014-02-23T20:40:05Z]
+[2014-05-14 00:03:56,256][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [false], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [nodetest1], collection [usercollection], script [null], indexing to [mongoindex]/[usercollection]
+[2014-05-14 00:03:56,356][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB version - 2.6.0
+[2014-05-14 00:03:56,399][WARN ][org.elasticsearch.river.mongodb.Slurper] Exception in slurper
+org.elasticsearch.river.mongodb.Slurper$SlurperException: River out of sync with oplog.rs collection
+	at org.elasticsearch.river.mongodb.Slurper.isRiverStale(Slurper.java:618)
+	at org.elasticsearch.river.mongodb.Slurper.oplogCursor(Slurper.java:603)
+	at org.elasticsearch.river.mongodb.Slurper.run(Slurper.java:119)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-14 00:05:40,880][INFO ][node                     ] [Poison] stopping ...
+[2014-05-14 00:05:40,900][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river mongodb
+[2014-05-14 00:05:40,900][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing Mongo client
+[2014-05-14 00:05:40,900][INFO ][org.elasticsearch.river.mongodb.Indexer] river-mongodb indexer interrupted
+[2014-05-14 00:05:40,900][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Status thread interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at org.elasticsearch.river.mongodb.StatusChecker.run(StatusChecker.java:33)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-14 00:05:40,931][INFO ][node                     ] [Poison] stopped
+[2014-05-14 00:05:40,932][INFO ][node                     ] [Poison] closing ...
+[2014-05-14 00:05:40,937][INFO ][node                     ] [Poison] closed
+[2014-05-14 00:05:45,118][INFO ][node                     ] [Maggott] version[1.1.1], pid[22547], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 00:05:45,118][INFO ][node                     ] [Maggott] initializing ...
+[2014-05-14 00:05:45,143][INFO ][plugins                  ] [Maggott] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 00:05:47,383][INFO ][node                     ] [Maggott] initialized
+[2014-05-14 00:05:47,383][INFO ][node                     ] [Maggott] starting ...
+[2014-05-14 00:05:47,459][INFO ][transport                ] [Maggott] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-14 00:05:50,501][INFO ][cluster.service          ] [Maggott] new_master [Maggott][Dd-rT8mVSCqkHmMiIF1Vow][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-14 00:05:50,524][INFO ][discovery                ] [Maggott] elasticsearch/Dd-rT8mVSCqkHmMiIF1Vow
+[2014-05-14 00:05:50,540][INFO ][http                     ] [Maggott] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-14 00:05:50,560][INFO ][gateway                  ] [Maggott] recovered [0] indices into cluster_state
+[2014-05-14 00:05:50,560][INFO ][node                     ] [Maggott] started
+[2014-05-14 00:06:19,959][INFO ][node                     ] [Maggott] stopping ...
+[2014-05-14 00:06:19,981][INFO ][node                     ] [Maggott] stopped
+[2014-05-14 00:06:19,981][INFO ][node                     ] [Maggott] closing ...
+[2014-05-14 00:06:19,988][INFO ][node                     ] [Maggott] closed
+[2014-05-14 00:06:38,695][INFO ][node                     ] [Isaac Christians] version[1.1.1], pid[22558], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 00:06:38,695][INFO ][node                     ] [Isaac Christians] initializing ...
+[2014-05-14 00:06:38,720][INFO ][plugins                  ] [Isaac Christians] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 00:07:36,700][INFO ][node                     ] [Challenger] version[1.1.1], pid[22577], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 00:07:36,701][INFO ][node                     ] [Challenger] initializing ...
+[2014-05-14 00:07:36,726][INFO ][plugins                  ] [Challenger] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 00:07:38,976][INFO ][node                     ] [Challenger] initialized
+[2014-05-14 00:07:38,976][INFO ][node                     ] [Challenger] starting ...
+[2014-05-14 00:07:39,052][INFO ][transport                ] [Challenger] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-14 00:07:42,092][INFO ][cluster.service          ] [Challenger] new_master [Challenger][_ue66ZBZTzKg4joe8FdO5A][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-14 00:07:42,114][INFO ][discovery                ] [Challenger] elasticsearch/_ue66ZBZTzKg4joe8FdO5A
+[2014-05-14 00:07:42,129][INFO ][http                     ] [Challenger] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-14 00:07:42,146][INFO ][gateway                  ] [Challenger] recovered [0] indices into cluster_state
+[2014-05-14 00:07:42,147][INFO ][node                     ] [Challenger] started
+[2014-05-14 00:07:44,482][INFO ][node                     ] [Challenger] stopping ...
+[2014-05-14 00:07:44,504][INFO ][node                     ] [Challenger] stopped
+[2014-05-14 00:07:44,504][INFO ][node                     ] [Challenger] closing ...
+[2014-05-14 00:07:44,510][INFO ][node                     ] [Challenger] closed
+[2014-05-14 00:08:06,095][INFO ][node                     ] [Alexander Summers] version[1.1.1], pid[22584], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 00:08:06,095][INFO ][node                     ] [Alexander Summers] initializing ...
+[2014-05-14 00:08:06,120][INFO ][plugins                  ] [Alexander Summers] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 00:08:08,342][INFO ][node                     ] [Alexander Summers] initialized
+[2014-05-14 00:08:08,342][INFO ][node                     ] [Alexander Summers] starting ...
+[2014-05-14 00:08:08,418][INFO ][transport                ] [Alexander Summers] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-14 00:08:11,458][INFO ][cluster.service          ] [Alexander Summers] new_master [Alexander Summers][sZN4f2JGT92HQYSprTNBfQ][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-14 00:08:11,481][INFO ][discovery                ] [Alexander Summers] elasticsearch/sZN4f2JGT92HQYSprTNBfQ
+[2014-05-14 00:08:11,495][INFO ][http                     ] [Alexander Summers] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-14 00:08:11,511][INFO ][gateway                  ] [Alexander Summers] recovered [0] indices into cluster_state
+[2014-05-14 00:08:11,512][INFO ][node                     ] [Alexander Summers] started
+[2014-05-14 00:09:16,824][INFO ][cluster.metadata         ] [Alexander Summers] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-14 00:09:17,108][DEBUG][action.index             ] [Alexander Summers] [_river][0], node[sZN4f2JGT92HQYSprTNBfQ], [P], s[STARTED]: Failed to execute [index {[_river][mongodb][_meta], source[{"type": "mongodb","mongodb": {"host": "localhost","port": "27017","db": "cmpe226","collection": "itemcollection"},"index": {"name": "mongoindex",”type": "itemcollection"} }]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:540)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:384)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting a colon to separate field name and value
+ at [Source: [B@78a3335c; line: 1, column: 155]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1524)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:710)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:471)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeObject(ObjectMapper.java:555)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	... 8 more
+[2014-05-14 00:09:32,290][INFO ][cluster.metadata         ] [Alexander Summers] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:09:33,320][INFO ][river.mongodb            ] Parse river settings for mongodb
+[2014-05-14 00:09:33,335][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river mongodb
+[2014-05-14 00:09:33,346][INFO ][cluster.metadata         ] [Alexander Summers] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:09:33,347][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.0] - hash[a0c23f1] - time[2014-02-23T20:40:05Z]
+[2014-05-14 00:09:33,347][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [false], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [cmpe226], collection [itemcollection], script [null], indexing to [mongoindex]/[itemcollection]
+[2014-05-14 00:09:33,387][INFO ][cluster.metadata         ] [Alexander Summers] [mongoindex] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-14 00:09:35,086][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB version - 2.6.0
+[2014-05-14 00:09:35,099][INFO ][org.elasticsearch.river.mongodb.Slurper] MongoDBRiver is beginning initial import of cmpe226.itemcollection
+[2014-05-14 00:09:35,102][INFO ][cluster.metadata         ] [Alexander Summers] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:09:35,121][INFO ][org.elasticsearch.river.mongodb.Slurper] Collection itemcollection - count: 0
+[2014-05-14 00:09:35,122][INFO ][org.elasticsearch.river.mongodb.Slurper] Number documents indexed: 0
+[2014-05-14 00:28:30,575][INFO ][node                     ] [Alexander Summers] stopping ...
+[2014-05-14 00:28:30,583][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river mongodb
+[2014-05-14 00:28:30,584][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing Mongo client
+[2014-05-14 00:28:30,584][INFO ][org.elasticsearch.river.mongodb.Indexer] river-mongodb indexer interrupted
+[2014-05-14 00:28:30,584][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Status thread interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at org.elasticsearch.river.mongodb.StatusChecker.run(StatusChecker.java:33)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-14 00:28:30,609][INFO ][node                     ] [Alexander Summers] stopped
+[2014-05-14 00:28:30,609][INFO ][node                     ] [Alexander Summers] closing ...
+[2014-05-14 00:28:30,616][INFO ][node                     ] [Alexander Summers] closed
+[2014-05-14 00:29:03,142][INFO ][node                     ] [Orchid] version[1.1.1], pid[22955], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 00:29:03,142][INFO ][node                     ] [Orchid] initializing ...
+[2014-05-14 00:29:03,167][INFO ][plugins                  ] [Orchid] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 00:29:05,454][INFO ][node                     ] [Orchid] initialized
+[2014-05-14 00:29:05,454][INFO ][node                     ] [Orchid] starting ...
+[2014-05-14 00:29:05,525][INFO ][transport                ] [Orchid] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-14 00:29:08,560][INFO ][cluster.service          ] [Orchid] new_master [Orchid][m3xBmxUNSWOMLp589zDqSA][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-14 00:29:08,583][INFO ][discovery                ] [Orchid] elasticsearch/m3xBmxUNSWOMLp589zDqSA
+[2014-05-14 00:29:08,597][INFO ][http                     ] [Orchid] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-14 00:29:08,618][INFO ][gateway                  ] [Orchid] recovered [0] indices into cluster_state
+[2014-05-14 00:29:08,619][INFO ][node                     ] [Orchid] started
+[2014-05-14 00:29:30,661][INFO ][cluster.metadata         ] [Orchid] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings []
+[2014-05-14 00:29:30,950][INFO ][cluster.metadata         ] [Orchid] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:29:31,975][INFO ][river.mongodb            ] Parse river settings for mongodb
+[2014-05-14 00:29:31,995][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river mongodb
+[2014-05-14 00:29:32,004][INFO ][cluster.metadata         ] [Orchid] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:29:32,005][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.0] - hash[a0c23f1] - time[2014-02-23T20:40:05Z]
+[2014-05-14 00:29:32,005][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [false], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [cmpe226], collection [itemcollection], script [null], indexing to [mongoindex]/[itemcollection]
+[2014-05-14 00:29:32,048][INFO ][cluster.metadata         ] [Orchid] [mongoindex] creating index, cause [api], shards [5]/[1], mappings []
+[2014-05-14 00:29:32,253][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB version - 2.6.0
+[2014-05-14 00:29:32,269][INFO ][cluster.metadata         ] [Orchid] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:29:32,283][INFO ][org.elasticsearch.river.mongodb.Slurper] MongoDBRiver is beginning initial import of cmpe226.itemcollection
+[2014-05-14 00:29:32,289][INFO ][org.elasticsearch.river.mongodb.Slurper] Collection itemcollection - count: 0
+[2014-05-14 00:29:32,290][INFO ][org.elasticsearch.river.mongodb.Slurper] Number documents indexed: 0
+[2014-05-14 00:34:16,798][INFO ][cluster.metadata         ] [Orchid] [_river] update_mapping [mongodb] (dynamic)
+[2014-05-14 00:34:16,820][INFO ][cluster.metadata         ] [Orchid] [mongoindex] update_mapping [itemcollection] (dynamic)
+[2014-05-14 00:36:48,548][INFO ][node                     ] [Orchid] stopping ...
+[2014-05-14 00:36:48,553][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river mongodb
+[2014-05-14 00:36:48,553][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing Mongo client
+[2014-05-14 00:36:48,553][INFO ][org.elasticsearch.river.mongodb.Indexer] river-mongodb indexer interrupted
+[2014-05-14 00:36:48,554][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Status thread interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at org.elasticsearch.river.mongodb.StatusChecker.run(StatusChecker.java:33)
+	at java.lang.Thread.run(Thread.java:745)
+[2014-05-14 00:36:48,590][INFO ][node                     ] [Orchid] stopped
+[2014-05-14 00:36:48,590][INFO ][node                     ] [Orchid] closing ...
+[2014-05-14 00:36:48,596][INFO ][node                     ] [Orchid] closed

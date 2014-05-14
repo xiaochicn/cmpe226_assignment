@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p Hello, world! Welcome to
+  
+  each d,i in data
+    p #{d._source.category}

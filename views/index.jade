@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  div.header-container
+   div.page-header
+     h1 CMPE226 Assignment
+  div.container
+    form( role="form" action='/search',method='get' class="")
+      h4 All Products:
+      div(class="input-group position-right") 
+        input(type="text" name="searchText" placeholder="search")
+        input(type="submit" value="submit")
+    ul.nav.nav-tabs
+      each c,i in categories
+        if i == 0
+          li.active
+            a(href="##{c}" data-toggle="tab") #{c}	
+        else
+          li 
+            a(href="##{c}" data-toggle="tab") #{c}	
+    div.tab-content
+      each c,i in categories
+        div(class= i==0?"tab-pane active":"tab-pane" id="#{c}")
+          br
+          each d,i in data
+            if d.category == c
+              div(class="panel panel-default")
+                div.panel-heading.
+                  p #{d.name}
+                div.panel-body
+                  table(class="table table-hover")
+                    each v,k in d 
+                      if k != "_id" && k != "name" && k != "category"     
+                        tr
+                          td #{k}
+                          td #{v}
+                        tr
+           
+          
