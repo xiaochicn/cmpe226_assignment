@@ -31,6 +31,8 @@ Step 2: Run elasticsearch
     > ./elasticsearch  -Des.default.config=../config/elasticsearch.yml
 
 Step 3: insert data
+    
+    
     Since I can't upload my data on github, you have to browse the page http://localhost:3000/insert
 
  Finally, the data can be seen under http://localhost:3000/
