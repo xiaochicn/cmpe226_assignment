@@ -174,3 +174,25 @@ java.lang.InterruptedException: sleep interrupted
 [2014-05-14 00:36:48,590][INFO ][node                     ] [Orchid] stopped
 [2014-05-14 00:36:48,590][INFO ][node                     ] [Orchid] closing ...
 [2014-05-14 00:36:48,596][INFO ][node                     ] [Orchid] closed
+[2014-05-14 18:32:18,628][INFO ][node                     ] [Hawkeye] version[1.1.1], pid[25688], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-14 18:32:18,629][INFO ][node                     ] [Hawkeye] initializing ...
+[2014-05-14 18:32:18,654][INFO ][plugins                  ] [Hawkeye] loaded [mongodb-river], sites [river-mongodb]
+[2014-05-14 18:32:20,984][INFO ][node                     ] [Hawkeye] initialized
+[2014-05-14 18:32:20,985][INFO ][node                     ] [Hawkeye] starting ...
+[2014-05-14 18:32:21,064][INFO ][transport                ] [Hawkeye] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.72:9300]}
+[2014-05-14 18:32:24,104][INFO ][cluster.service          ] [Hawkeye] new_master [Hawkeye][RTTkTYsbS7-BlHluUy6zgA][Chi-MacPro][inet[/192.168.1.72:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-14 18:32:24,126][INFO ][discovery                ] [Hawkeye] elasticsearch/RTTkTYsbS7-BlHluUy6zgA
+[2014-05-14 18:32:24,141][INFO ][http                     ] [Hawkeye] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.72:9200]}
+[2014-05-14 18:32:24,655][INFO ][gateway                  ] [Hawkeye] recovered [2] indices into cluster_state
+[2014-05-14 18:32:24,656][INFO ][node                     ] [Hawkeye] started
+[2014-05-14 18:32:24,928][INFO ][river.mongodb            ] Parse river settings for mongodb
+[2014-05-14 18:32:24,960][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river mongodb
+[2014-05-14 18:32:24,973][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.0] - hash[a0c23f1] - time[2014-02-23T20:40:05Z]
+[2014-05-14 18:32:24,973][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [false], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [cmpe226], collection [itemcollection], script [null], indexing to [mongoindex]/[itemcollection]
+[2014-05-14 18:32:25,087][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB version - 2.6.0
+[2014-05-14 18:32:25,131][WARN ][org.elasticsearch.river.mongodb.Slurper] Exception in slurper
+org.elasticsearch.river.mongodb.Slurper$SlurperException: River out of sync with oplog.rs collection
+	at org.elasticsearch.river.mongodb.Slurper.isRiverStale(Slurper.java:618)
+	at org.elasticsearch.river.mongodb.Slurper.oplogCursor(Slurper.java:603)
+	at org.elasticsearch.river.mongodb.Slurper.run(Slurper.java:119)
+	at java.lang.Thread.run(Thread.java:745)
