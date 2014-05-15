@@ -29,8 +29,16 @@ Step 2: Run elasticsearch
 
     2.
     > ./elasticsearch  -Des.default.config=../config/elasticsearch.yml
+    
+Step 3: Run the project
+    
+    // go to project directory
+    > cd cmpe226_assignment
+    
+    // run it
+    > npm start
 
-Step 3: insert data
+Step 4: insert data
     
     
     Since I can't upload my data on github, you have to browse the page http://localhost:3000/insert
