@@ -20,7 +20,7 @@ Step 1: Create MongoDB ReplicaSet
    In terminal3:
 
     > mongo
-    > config config = {_id:'rs1',members:[{_id:0, host:'localhost:27017'},{_id:1,host:'localhost:27018'}]}
+    > config = {_id:'rs1',members:[{_id:0, host:'localhost:27017'},{_id:1,host:'localhost:27018'}]}
     > rs.initiate(config)
 
 Step 2: Run elasticsearch
